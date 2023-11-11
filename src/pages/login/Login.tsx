@@ -73,7 +73,7 @@ export default function Home() {
             
           </Typography>
           <Button  color='secondary' onClick={() => navigate('/SignUp')}>Sign Up</Button>
-          <Button  color='secondary' onClick={() => navigate('/Layout')}>layout</Button>
+          
         </Toolbar>
       </AppBar>
 

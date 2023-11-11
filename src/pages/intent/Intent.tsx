@@ -2,6 +2,8 @@ import "./intent.scss"
 import DataTable from '../../components/dataTable/DataTable'
 import { GridColDef } from "@mui/x-data-grid";
 import { userRows } from "../../data";
+import { useState } from "react";
+import Add from "../../components/add/Add";
 
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 90 },
@@ -34,14 +36,15 @@ const rows = [
 ];
 
 const Intent = () => {
-  
+  const [open, setOpen] = useState(false);
   return (
     <div className="intent">
         <div className="info">
           <h1>Intent</h1>
-          <button>Add</button>
+          <button onClick={()=>setOpen(true)}>Add New</button>
         </div>
         <DataTable columns={columns} rows={userRows}/>
+        {open && <Add slug="intent" columns={columns} setOpen={setOpen} />} 
     </div>
   )
 }

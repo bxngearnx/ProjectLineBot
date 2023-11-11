@@ -48,12 +48,7 @@ const DataTable = (props:Props) => {
       },
     }}
     slots={{toolbar:GridToolbar}}
-    slotProps={{
-      toolbar:{
-        showQuickFilter:true,
-        quickFilterProps: {debounceMs: 500},
-      },
-    }}
+    
     pageSizeOptions={[5]}
     checkboxSelection
     disableRowSelectionOnClick
