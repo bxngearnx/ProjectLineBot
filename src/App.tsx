@@ -1,6 +1,5 @@
 import Home from "./pages/home/Home";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Users from "./pages/users/Users";
 import Products from "./pages/products/Products";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
@@ -17,6 +16,7 @@ import Intent from "./pages/intent/Intent";
 import Chatbot from "./pages/Chatbot/Chatbot";
 import Training from "./pages/Training/Training";
 import Photo from "./pages/Photo/Photo";
+import SignUp from "./pages/SignUp/SignUp";
 
 
 const queryClient = new QueryClient();
@@ -46,6 +46,13 @@ function App() {
       
         path: "/",
         element: <Login />,
+
+      },
+      { 
+      
+        path: "/SignUp",
+        element: <SignUp />,
+        
       },
       {
       

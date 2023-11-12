@@ -28,7 +28,7 @@ const Theme = createTheme({
   },
 });
 
-export default function Home() {
+export default function Login() {
   const navigate = useNavigate();
 
 
