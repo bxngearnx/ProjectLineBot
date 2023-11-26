@@ -1,23 +1,17 @@
-import Home from "./pages/home/Home";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Products from "./pages/products/Products";
-import Navbar from "./components/navbar/Navbar";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Menu from "./components/menu/Menu";
-import Login from "./pages/login/Login";
-import "./styles/global.scss";
-import User from "./pages/user/User";
-import Product from "./pages/product/Product";
-import {
-  QueryClient,
-  QueryClientProvider,
-} from "@tanstack/react-query";
-import Intent from "./pages/intent/Intent";
+import Navbar from "./components/navbar/Navbar";
 import Chatbot from "./pages/Chatbot/Chatbot";
-import Training from "./pages/Training/Training";
 import Photo from "./pages/Photo/Photo";
 import SignUp from "./pages/SignUp/SignUp";
-
+import Training from "./pages/Training/Training";
+import BroadcastPage from "./pages/broascast/BroadcastPage";
+import Home from "./pages/home/Home";
+import Intent from "./pages/intent/Intent";
+import Login from "./pages/login/Login";
+import "./styles/global.scss";
 
 const queryClient = new QueryClient();
 
@@ -42,20 +36,15 @@ function App() {
   };
 
   const router = createBrowserRouter([
-    { 
-      
-        path: "/",
-        element: <Login />,
-
-      },
-      { 
-      
-        path: "/SignUp",
-        element: <SignUp />,
-        
-      },
-      {
-      
+    {
+      path: "/",
+      element: <Login />,
+    },
+    {
+      path: "/SignUp",
+      element: <SignUp />,
+    },
+    {
       path: "/",
       element: <Layout />,
       children: [
@@ -79,9 +68,12 @@ function App() {
           path: "/photo",
           element: <Photo />,
         },
+        {
+          path: "/broadcast",
+          element: <BroadcastPage />,
+        },
       ],
     },
-
   ]);
 
   return <RouterProvider router={router} />;
