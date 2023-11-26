@@ -15,6 +15,12 @@ export const menu = [
         url: "/intent",
         icon: "user.svg",
       },
+      {
+        id: 2,
+        title: "Broadcast",
+        url: "/broadcast",
+        icon: "broadcast.svg",
+      },
     ],
   },
   {
@@ -554,8 +560,6 @@ export const products = [
     inStock: true,
   },
 ];
-
-
 
 export const singleUser = {
   id: 1,
