@@ -12,6 +12,7 @@ import Home from "./pages/home/Home";
 import Intent from "./pages/intent/Intent";
 import Login from "./pages/login/Login";
 import "./styles/global.scss";
+import IntentDetail from "./pages/intent/detail/IntentDetail";
 
 const queryClient = new QueryClient();
 
@@ -56,6 +57,7 @@ function App() {
           path: "/intent",
           element: <Intent />,
         },
+        { path: "/intent/:id/detail", element: <IntentDetail /> },
         {
           path: "/chatbot",
           element: <Chatbot />,
