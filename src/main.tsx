@@ -6,10 +6,13 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import ToasterContext from "./contexts/ToastContext.tsx";
 
 // const theme = unstable_createMuiStrictModeTheme();
-
+const font = "'Inter', sans-serif;";
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
+  },
+  typography: {
+    fontFamily: font,
   },
 });
 
@@ -19,6 +22,5 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       <ToasterContext />
       <App />
     </ThemeProvider>
-    ;
   </React.StrictMode>
 );
