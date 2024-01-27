@@ -1,5 +1,6 @@
-import AssignmentIndOutlinedIcon from "@mui/icons-material/AssignmentIndOutlined";
 import { Box, Stack, Typography } from "@mui/material";
+import SUTHLogo from "/suth.svg";
+import "./banner.scss";
 
 const Banner = () => {
   return (
@@ -9,14 +10,29 @@ const Banner = () => {
         direction={"row"}
         alignItems={"center"}
         spacing={2}
-        px={4}
+        px={8}
       >
-        <AssignmentIndOutlinedIcon
-          sx={{ width: 52, height: 52, color: "#fff" }}
-        />
-        <Typography variant="h4" color={"#fff"} fontWeight={600}>
-          React Admin Dashboard
-        </Typography>
+        <Box>
+          <img src={SUTHLogo} />
+        </Box>
+        <Box>
+          <Typography
+            className="signup-banner"
+            variant="h4"
+            color={"#fff"}
+            fontWeight={600}
+          >
+            โรงพยาบาลมหาวิทยาลัยเทคโนโลยีสุรนารี
+          </Typography>
+          <Typography
+            className="signup-banner"
+            variant="h5"
+            color={"#fff"}
+            fontWeight={600}
+          >
+            Suranaree University Of Technology Hospital
+          </Typography>
+        </Box>
       </Stack>
     </Box>
   );
