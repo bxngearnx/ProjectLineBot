@@ -7,6 +7,8 @@ export const useIntentDetail = (intentId: string | undefined) => {
     (data) => data.id.toString() === intentId
   );
 
+  console.log(intent);
+
   const form = useForm<IIntent>({
     defaultValues: {
       id: intent?.id,

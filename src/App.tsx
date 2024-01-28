@@ -13,6 +13,7 @@ import Intent from "./pages/intent/Intent";
 import Login from "./pages/login/Login";
 import "./styles/global.scss";
 import IntentDetail from "./pages/intent/detail/IntentDetail";
+import User from "./pages/user/User";
 
 const queryClient = new QueryClient();
 
@@ -73,6 +74,10 @@ function App() {
         {
           path: "/broadcast",
           element: <BroadcastPage />,
+        },
+        {
+          path: "/user",
+          element: <User />,
         },
       ],
     },

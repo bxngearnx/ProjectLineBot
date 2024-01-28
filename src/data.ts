@@ -16,10 +16,16 @@ export const menu = [
         icon: "user.svg",
       },
       {
-        id: 2,
+        id: 3,
         title: "Broadcast",
         url: "/broadcast",
         icon: "broadcast.svg",
+      },
+      {
+        id: 4,
+        title: "User",
+        url: "/user",
+        icon: "user.svg",
       },
     ],
   },
